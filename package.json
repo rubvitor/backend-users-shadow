@@ -4,7 +4,8 @@
   "description": "Zowe Users Git API",
   "main": "index.js",
   "engines": {
-    "node": "16.x"
+    "node": "16.x",
+    "npm": "6.x"
   },
   "scripts": {
     "dev": "nodemon src/index.js",
