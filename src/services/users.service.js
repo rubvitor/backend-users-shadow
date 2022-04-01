@@ -11,7 +11,7 @@ const getUsers = function (since, req, res) {
         res.send({
             body: JSON.parse(response.body),
             current: since,
-            previous: previous,
+            previous: baseUrl + '/users?since=' + previous,
             next: baseUrl + '/users?since=' + next
         });
     });
