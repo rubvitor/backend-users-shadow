@@ -1,0 +1,20 @@
+name: users-git-shaw-api
+id: org.rubens.user-git-shaw
+title: Users Git Shaw
+description: Api Users Git Shaw
+license: EPL-2.0
+repository:
+  type: git
+  url: https://github.com/rubvitor/backend-users-shaw.git
+build:
+  branch: "{{build.branch}}"
+  number: "{{build.number}}"
+  commitHash: "{{build.commitHash}}"
+  timestamp: "{{build.timestamp}}"
+commands:
+  start: bin/start.sh
+apimlServices:
+  static:
+    - file: sample-node-api.yml
+configs:
+  port: 18000
