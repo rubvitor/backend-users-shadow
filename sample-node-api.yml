@@ -5,7 +5,7 @@ services:
       description: Users Git API
       catalogUiTileId: users-git-shaw
       instanceBaseUrls:
-        - http://${SHAW_EXPLORER_HOST}:18000/
+        - http://${SHAW_EXPLORER_HOST}/
       homePageRelativeUrl:  # Home page is at the same URL
       routedServices:
         - gatewayUrl: api/v1  # [api/ui/ws]/v{majorVersion}
@@ -14,8 +14,8 @@ services:
         - apiId: com.git.users-git-shaw
           gatewayUrl: api/v1
           version: 1.0.0
-          swaggerUrl: http://${SHAW_EXPLORER_HOST}:18000/api-docs
-          documentationUrl: http://${SHAW_EXPLORER_HOST}:18000/api-docs-ui
+          swaggerUrl: http://${SHAW_EXPLORER_HOST}/api-docs
+          documentationUrl: http://${SHAW_EXPLORER_HOST}/api-docs-ui
 
 catalogUiTiles:
     users-git-shaw:
