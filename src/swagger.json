@@ -6,7 +6,7 @@
   ,"host":"localhost:443"
   ,"basePath":"/"
   ,"tags":[{"name":"Users","description":"Users API"},{"name":"UserDatails","description":"User Datails API"},{"name":"UserRepos","description":"User Repos API"}]
-  ,"schemes":["http"]
+  ,"schemes":["https"]
   ,"produces": ["application/json"],
   "paths": {
     "/users": {
