@@ -14,6 +14,6 @@ app.use(routes);
 //start http server
 const httpServer = http.createServer(app);
 httpServer.listen(process.env.PORT || 3000);
-console.log(`[${serviceName}] http server listening at port ${process.env.PORT || 3000}`);
+console.log(`http server listening at port ${process.env.PORT || 3000}`);
 
 module.exports = { app };
