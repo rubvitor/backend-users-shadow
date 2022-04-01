@@ -1,0 +1,23 @@
+#
+services:
+    - serviceId: users-git-shaw
+      title: Users-Git-Shaw
+      description: Users Git API
+      catalogUiTileId: users-git-shaw
+      instanceBaseUrls:
+        - http://${ZOWE_EXPLORER_HOST}:18000/
+      homePageRelativeUrl:  # Home page is at the same URL
+      routedServices:
+        - gatewayUrl: api/v1  # [api/ui/ws]/v{majorVersion}
+          serviceRelativeUrl:
+      apiInfo:
+        - apiId: com.git.users-git-shaw
+          gatewayUrl: api/v1
+          version: 1.0.0
+          swaggerUrl: http://${ZOWE_EXPLORER_HOST}:18000/api-docs
+          documentationUrl: http://${ZOWE_EXPLORER_HOST}:18000/api-docs-ui
+
+catalogUiTiles:
+    users-git-shaw:
+      title: users-git-shaw
+      description: Users Git API

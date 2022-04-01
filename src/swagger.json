@@ -1,0 +1,71 @@
+{
+  "swagger":"2.0"
+  ,"info":{"description":"Users Git Shaw"
+  ,"version":"1.0"
+  ,"title":"Users Git Shaw"}
+  ,"host":"localhost:18000"
+  ,"basePath":"/"
+  ,"tags":[{"name":"Users","description":"Users API"},{"name":"UserDatails","description":"User Datails API"},{"name":"UserRepos","description":"User Repos API"}]
+  ,"schemes":["http"]
+  ,"produces": ["application/json"],
+  "paths": {
+    "/users": {
+      "get": {
+        "x-swagger-router-controller": "users",
+        "operationId": "getUsers",
+        "tags": ["Users"],
+        "summary": "Get Users",
+        "parameters": [ {
+          "name": "since",
+          "in": "query",
+          "type": "number",
+          "required": true
+        }],
+        "responses": {
+          "200": {
+            "description": "Get Users"
+          }
+        }
+      }
+    },
+    "/users/{username}/details": {
+      "get": {
+        "x-swagger-router-controller": "users",
+        "operationId": "getUserDetails",
+        "tags": ["Users"],
+        "summary": "Get Details from User",
+        "parameters": [ {
+          "name": "username",
+          "in": "path",
+          "type": "string",
+          "required": true
+        }],
+        "responses": {
+          "200": {
+            "description": "Details from User"
+          }
+        }
+      }
+    },
+    "/users/{username}/repos": {
+      "get": {
+        "x-swagger-router-controller": "users",
+        "operationId": "getUserRepos",
+        "tags": ["Users"],
+        "summary": "Get User Repos",
+        "parameters": [ {
+          "name": "username",
+          "in": "path",
+          "type": "string",
+          "required": true
+        }
+        ],
+        "responses": {
+          "200": {
+            "description": "User Repos"
+          }
+        }
+      }
+    }
+  }
+}
