@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Zowe Users Git API",
   "main": "index.js",
+  "engines": {
+    "node": "16.x"
+  },
   "scripts": {
     "dev": "nodemon src/index.js",
     "dev:https": "nodemon src/index.js --key sslcert/server.key --cert sslcert/server.cert",
