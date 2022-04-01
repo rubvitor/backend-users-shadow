@@ -17,4 +17,4 @@ apimlServices:
   static:
     - file: sample-node-api.yml
 configs:
-  port: 18000
+  port: 443

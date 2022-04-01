@@ -17,7 +17,7 @@ Image zowe-docker-release.jfrog.io/ompzowe/users-git-shaw:latest should be able 
 - `KEYSTORE_KEY`: You can supply your own certificate private key
 - `KEYSTORE_CERTIFICATE`: You can supply your own certificate
 - `MY_API_NAME`: You can supply your API NAme (Default is users-git-shaw)
-- `MY_API_PORT`: You can supply your own API_PORT (Default is 18000)
+- `MY_API_PORT`: You can supply your own API_PORT (Default is 443)
 
 Example commands:
 

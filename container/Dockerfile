@@ -27,5 +27,5 @@ COPY --chown=zowe:zowe component/LICENSE /licenses
 RUN npm install --only=prod
 
 # start command
-EXPOSE 18000
+EXPOSE 443
 ENTRYPOINT [ "bin/start.sh" ]

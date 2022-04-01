@@ -8,7 +8,7 @@ KEYSTORE_ALIAS=localhost
 KEYSTORE_PREFIX="${KEYSTORE_DIRECTORY}/${KEYSTORE_ALIAS}/${KEYSTORE_ALIAS}.keystore"
 KEYSTORE_KEY=${KEYSTORE_PREFIX}.key
 KEYSTORE_CERTIFICATE=${KEYSTORE_PREFIX}.cer-ebcdic
-node src/index.js --service users-git-shaw --port 18000 --key ${KEYSTORE_KEY} --cert ${KEYSTORE_CERTIFICATE} -v
+node src/index.js --service users-git-shaw --port 443 --key ${KEYSTORE_KEY} --cert ${KEYSTORE_CERTIFICATE} -v
 
 # register with API ML layer
 cd ~/zowe/extenders/users-git-shaw

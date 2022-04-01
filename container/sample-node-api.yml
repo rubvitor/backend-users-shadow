@@ -60,11 +60,11 @@ spec:
               cpu: "100m"
           ports:
             - name: sna-port
-              containerPort: 18000
+              containerPort: 443
               protocol: TCP
           readinessProbe:
             tcpSocket:
-              port: 18000
+              port: 443
             initialDelaySeconds: 30
             # this should give 18 * periodSeconds(default to 10) seconds about 3 minutes to confirm it's ready
             failureThreshold: 18

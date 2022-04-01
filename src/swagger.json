@@ -3,7 +3,7 @@
   ,"info":{"description":"Users Git Shaw"
   ,"version":"1.0"
   ,"title":"Users Git Shaw"}
-  ,"host":"localhost:18000"
+  ,"host":"localhost:443"
   ,"basePath":"/"
   ,"tags":[{"name":"Users","description":"Users API"},{"name":"UserDatails","description":"User Datails API"},{"name":"UserRepos","description":"User Repos API"}]
   ,"schemes":["http"]
