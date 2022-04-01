@@ -6,10 +6,12 @@ const header = { 'user-agent': 'node.js' };
 const getUsers = function (since, req, res) {
     request('https://api.github.com/users?since=' + since, { method: 'GET', headers: header }, (error, response, body) => {
         const next = since + 1;
+        const previous = since == 0 ? 0 : since - 1;
         const baseUrl = 'https://' + req.headers.host;
         res.send({
             body: JSON.parse(response.body),
             current: since,
+            previous: previous,
             next: baseUrl + '/users?since=' + next
         });
     });
