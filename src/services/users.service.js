@@ -4,11 +4,12 @@ var url = require('url');
 const header = { 'user-agent': 'node.js' };
 
 const getUsers = function (since, req, res) {
-    request('https://api.github.com/users?since=' + since, { method: 'GET', headers: header }, (error, response, body) => {
-        const next = Number(since) * 30;
-        const previous = since == 0 ? 0 : (next - 30 < 0 ? 0 : next - 30);
+    const sinceCalc = since * 30;
+    request('https://api.github.com/users?since=' + sinceCalc, { method: 'GET', headers: header }, (error, response, body) => {
+        const next = Number(since) + 1;
+        const previous = since == 0 ? 0 : since - 1;
         const baseUrl = 'https://' + req.headers.host;
-        const current = Number(since) + 1;
+        const current = Number(since);
         res.send({
             body: JSON.parse(response.body),
             current: current,
