@@ -19,13 +19,13 @@ const getUsers = function (since, req, res) {
 }
 
 const getUserDetails = function (username, res) {
-    request(`https://api.github.com/users/${username}` + '&client_id=e1b8c9ab25870d8f825d&client_secret=9d7a832bf65a58d26cc0022fad0f323ed1a61398', { method: 'GET', headers: header }, (error, response, body) => {
+    request(`https://api.github.com/users/${username}` + '?client_id=e1b8c9ab25870d8f825d&client_secret=9d7a832bf65a58d26cc0022fad0f323ed1a61398', { method: 'GET', headers: header }, (error, response, body) => {
         res.send(JSON.parse(response.body));
     });
 }
 
 const getUserRepos = function (username, res) {
-    request(`https://api.github.com/users/${username}/repos` + '&client_id=e1b8c9ab25870d8f825d&client_secret=9d7a832bf65a58d26cc0022fad0f323ed1a61398', { method: 'GET', headers: header }, (error, response, body) => {
+    request(`https://api.github.com/users/${username}/repos` + '?client_id=e1b8c9ab25870d8f825d&client_secret=9d7a832bf65a58d26cc0022fad0f323ed1a61398', { method: 'GET', headers: header }, (error, response, body) => {
         res.send(JSON.parse(response.body));
     });
 }
