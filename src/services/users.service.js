@@ -8,7 +8,7 @@ const getUsers = function (since, req, res) {
         const next = Number(since) * 30;
         const previous = since == 0 ? 0 : (next - 30 < 0 ? 0 : next - 30);
         const baseUrl = 'https://' + req.headers.host;
-        const current = since + 1;
+        const current = Number(since) + 1;
         res.send({
             body: JSON.parse(response.body),
             current: current,
