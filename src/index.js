@@ -12,7 +12,7 @@ const routes = require('./routes/index.route');
 app.use(routes);
 
 //start http server
-app.listen(process.env.PORT || 3000);
-console.log(`http server listening at port ${process.env.PORT || 3000}`);
+app.listen(process.env.PORT || 4000);
+console.log(`http server listening at port ${process.env.PORT || 4000}`);
 
 module.exports = { app };
