@@ -1,10 +1,10 @@
 const request = require('request');
 
-const header = { 'user-agent': 'node.js' };
+const header = { 'user-agent': 'node.js', 'Authorization': 'token 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', 'Content-Type': 'application/json' };
 
 const getUsers = function (since, req, res) {
     const sinceCalc = since * 30;
-    request('https://api.github.com/users?since=' + sinceCalc + '&client_id=e1b8c9ab25870d8f825d&client_secret=9d7a832bf65a58d26cc0022fad0f323ed1a61398', { method: 'GET', headers: header }, (error, response, body) => {
+    request('https://api.github.com/users?since=' + sinceCalc, { method: 'GET', headers: header }, (error, response, body) => {
         const next = Number(since) + 1;
         const previous = since == 0 ? 0 : since - 1;
         const baseUrl = 'https://' + req.headers.host;
