@@ -1,6 +1,6 @@
 const request = require('request');
 
-const header = { 'user-agent': 'node.js', 'Authorization': 'token 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', 'Content-Type': 'application/json' };
+const header = { 'user-agent': 'node.js', 'Authorization': 'token ddd6774f5ab9173622b03e2459b84afc224cb168', 'Content-Type': 'application/json' };
 
 const getUsers = function (since, req, res) {
     const sinceCalc = since * 30;
